@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Support | SmartDonation+</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <style>
+        :root {
+            --primary-color: #32A87D;
+            --glass-bg: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            margin: 0;
+            padding: 80px 20px 20px;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+            color: white;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .support-container {
+            max-width: 600px;
+            margin: 0 auto;
+            animation: slideIn 1s ease-out;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+            margin-bottom: 2rem;
+        }
+
+        form {
+            display: grid;
+            gap: 1.5rem;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            background: rgba(255,255,255,0.05);
+            color: white;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            box-shadow: 0 0 8px rgba(50, 168, 125, 0.3);
+        }
+
+        button[type="submit"] {
+            background: var(--primary-color);
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        button[type="submit"]:hover {
+            transform: translateY(-2px);
+        }
+
+        .contact-info {
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @keyframes slideIn {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @media (max-width: 480px) {
+            .glass-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="support-container animate__animated animate__fadeInUp">
+        <div class="glass-card">
+            <h1 style="text-align: center; margin-bottom: 2rem;">Contact Support</h1>
+            <form>
+                <div>
+                    <label>Your Email</label>
+                    <input type="email" placeholder="name@example.com" required>
+                </div>
+                <div>
+                    <label>Message</label>
+                    <textarea rows="5" placeholder="How can we help you?" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+
+        <div class="contact-info animate__animated animate__fadeIn">
+            <h2>Direct Contact</h2>
+            <p>📧 support@smartdonation.plus</p>
+            <p>📞 +1 (555) 123-4567</p>
+        </div>
+    </div>
+
+    <!-- Chatbot Icon (Consistent with main page) -->
+    <div class="chatbot-icon animate__animated animate__bounceIn" 
+         style="position: fixed; right: 20px; bottom: 20px; width: 50px; height: 50px; cursor: pointer;">
+        <img src="https://cdn-icons-png.flaticon.com/128/17115/17115944.png" 
+             alt="Chatbot" 
+             style="width: 100%; height: 100%; filter: invert(1);">
+    </div>
+</body>
+</html>
